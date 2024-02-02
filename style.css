@@ -81,6 +81,10 @@ main .btn-primary:hover{
     border: var(--very-dark-blue);
 }
 
+main .main__page-container {
+    padding-top: 1rem;
+}
+
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active  {
     padding: 0.6rem 0.8rem;
     background-color: var(--red-primary-color);
@@ -96,10 +100,14 @@ main .btn-primary:hover{
     margin: 0;
 }
 
+.row-cols-1>*:first-child,
+.main__index .main__img-subcontainers #season_2023_card {
+    display: none;
+}
+
 .main__index .main__img-container {
     width: 100%;
     height: auto;
-    background-color: var(--red-primary-color);
     overflow: hidden;
 }
 
@@ -259,3 +267,108 @@ footer span {
     font-size: small;
 }
 
+
+
+
+@media screen and (max-width: 784px) {
+    .row-cols-md-4>* {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .main__index .row {
+        margin: 1rem 2rem 2rem;
+    } 
+
+    .main__index .main__img-container img {
+        height: auto;
+    }
+
+    .main__index .main__img-container {
+        display: none;
+    }
+
+    .row-cols-1>*:first-child,
+    .main__index .main__img-subcontainers .season_2023_card {
+        display: block;
+    }
+   
+    main .main__page-title {
+        font-size: 2.5rem;
+    }
+    
+    .main__page-container .table {
+        font-size: x-small;
+    }
+
+    .btn-group>.btn-group:not(:first-child), .btn-group>:not(.btn-check:first-child)+.btn {
+        font-size: small;
+    }
+
+    main .card-img-top {
+        object-fit: contain;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .navbar {
+        padding: 0.2rem 2rem;
+    }
+
+    .main__index .row {
+        margin: 0rem 0.5rem 1rem;
+    }
+
+    main {
+        margin: 2rem 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    p {
+        font-size: small;
+    }
+
+    main .btn-primary {
+        font-size: small;
+    }
+
+    footer {
+        justify-content: center;
+    }
+
+    main .container__driver--details {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 2rem 0rem;
+        padding: 0;
+        row-gap: 2rem;
+    }
+
+    main .main__page-title {
+        font-size: 2rem;
+    }
+    
+    .main__page-container .table {
+        font-size: xx-small;
+    }
+
+    .main__page-container .btn-group {
+        width: 100%;
+    }
+
+    main .main__page-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .container__team .card {
+        padding: 1rem 1rem 0rem;
+    }
+
+    .container__team .card-body {
+        padding: 0;
+    }
+}
